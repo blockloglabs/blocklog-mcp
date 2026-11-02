@@ -1243,21 +1243,16 @@ mod tests {
 
     #[test]
     fn verifies_reference_witnessed_receipt() {
-        let receipt: Value = serde_json::from_str(include_str!(
-            "../../../verifier/examples/witnessed_receipt.json"
-        ))
-        .expect("fixture");
+        let receipt: Value =
+            serde_json::from_str(include_str!("fixtures/witnessed_receipt.json")).expect("fixture");
         let signing_roots: Vec<Value> =
-            serde_json::from_str(include_str!("../../../verifier/examples/trust_roots.json"))
-                .expect("signing roots");
-        let witness_roots: BTreeMap<String, String> = serde_json::from_str(include_str!(
-            "../../../verifier/examples/witness_roots.json"
-        ))
-        .expect("witness roots");
-        let counterparty_roots: BTreeMap<String, String> = serde_json::from_str(include_str!(
-            "../../../verifier/examples/counterparty_roots.json"
-        ))
-        .expect("counterparty roots");
+            serde_json::from_str(include_str!("fixtures/trust_roots.json")).expect("signing roots");
+        let witness_roots: BTreeMap<String, String> =
+            serde_json::from_str(include_str!("fixtures/witness_roots.json"))
+                .expect("witness roots");
+        let counterparty_roots: BTreeMap<String, String> =
+            serde_json::from_str(include_str!("fixtures/counterparty_roots.json"))
+                .expect("counterparty roots");
         let mut trust_roots = BTreeMap::new();
         for root in signing_roots {
             let id = root["key_id"].as_str().expect("key id").to_owned();

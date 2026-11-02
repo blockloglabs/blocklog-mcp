@@ -1,0 +1,8 @@
+[
+  {
+    "key_id": "blocklog:execution-key:prod-2026",
+    "public_key": "736b8403662f60bddc0efd023b4dd26081d559dfa334288742c0be7aef5497fe",
+    "status": "active",
+    "algorithm": "ed25519"
+  }
+]

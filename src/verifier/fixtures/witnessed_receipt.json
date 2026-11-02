@@ -1,0 +1,110 @@
+{
+  "version": "1.0",
+  "receipt_id": "rcpt_demo_2026_001",
+  "execution_id": "exec_demo_2026_001",
+  "realm": {
+    "company_id": "acme-corp",
+    "environment": "production"
+  },
+  "policy": {
+    "policy_id": "pol_high_value_transfers",
+    "policy_version": 2,
+    "policy_hash": "fee45d96c79998964fb71d974b67e82d2925f23670ea7f20c98571a8926cd052",
+    "decision": "APPROVED",
+    "risk_score": 12,
+    "risk_level": "LOW"
+  },
+  "execution": {
+    "processor": "financial.stripe",
+    "action_type": "payment.transfer",
+    "started_at": "2026-10-10T12:00:00.000000Z",
+    "completed_at": "2026-10-10T12:00:01.000000Z"
+  },
+  "commitments": {
+    "execution_commitment": "bbdd0b4a7a793f2724473990fee86510e200c9e95cb88058f516130a86d231f4",
+    "outcome_commitment": "628a388831295325792d300f4c8cd6a953fdbb4b7ef657f4f8b178bb5f0122b5"
+  },
+  "outcome": {
+    "status": "succeeded",
+    "source": "adapter_verified"
+  },
+  "integrity": {
+    "merkle_root": "89d02b9c18274b4157c8f16f9a9ce449e98a8a6a0d98780ec96b98b3e969ad3c",
+    "merkle_proof": {
+      "leaf_hash": "2561a9588a4bc4a79656724f9c58e7ea6fef214467e0c813ef081493fa9818e3",
+      "sibling_hashes": [
+        {
+          "position": "right",
+          "hash": "452d9956c9acd3c6112f1be4ac77e9868e1ae1ae071efbbec9176b7b910189da"
+        },
+        {
+          "position": "right",
+          "hash": "58b952d856e46eb95e073acad85e1426e57a0f18719d040fb71d305b18a991e2"
+        }
+      ]
+    },
+    "canonical_serialization_hash": "f478bbe591e75a4f3d18a706a7f008e05b856f084b1f43926b1c5823effcf1e5"
+  },
+  "signing": {
+    "signer_key_id": "blocklog:execution-key:prod-2026",
+    "algorithm": "ed25519",
+    "signed_at": "2026-10-10T12:00:01.000000Z",
+    "signature": "c3acd41f8ac54a11d2e57e9f75894791903f27531199bb54080efb3a20000d799455062caba80788fbd694ca19ca7773243a693b4caac29a40f8f8b45a393500"
+  },
+  "transparency_checkpoint": {
+    "protocol_version": "checkpoint/1.0",
+    "checkpoint_id": "cp_2026_q4_001",
+    "log_id": "blocklog:global:transparency-v1",
+    "tree_size": 4,
+    "root_hash": "89d02b9c18274b4157c8f16f9a9ce449e98a8a6a0d98780ec96b98b3e969ad3c",
+    "previous_root_hash": null,
+    "timestamp": "2026-10-10T12:00:02.000000Z",
+    "signing": {
+      "signer_key_id": "blocklog:execution-key:prod-2026",
+      "algorithm": "ed25519",
+      "signature": "1ce31655c4e71734c30e4212c7be01ed33898ca42541c00e211f7fd15001cf7b25de7688f82aa53a0d00d1e005c852de2f197a16363f7513027b5e37adbb2c06"
+    }
+  },
+  "witness_attestations": [
+    {
+      "protocol_version": "witness-ack/1.0",
+      "witness_id": "audit.watchdog-global.org",
+      "log_id": "blocklog:global:transparency-v1",
+      "tree_size": 4,
+      "root_hash": "89d02b9c18274b4157c8f16f9a9ce449e98a8a6a0d98780ec96b98b3e969ad3c",
+      "checkpoint_id": "cp_2026_q4_001",
+      "acknowledged_at": "2026-10-10T18:09:00.770369+00:00",
+      "witness_key_id": "witness:key:watchdog-2026",
+      "signature": "9ebdf180dc8e3292ad9f0c6e15a515018b1c9244cd41191f368b97c7cc2ca69ad223e37b94f5c0d50f672efc8a6dc7f091649ef1244868ccea0fb840f2593601"
+    }
+  ],
+  "counterparty_attestations": [
+    {
+      "protocol_version": "attestation/1.0",
+      "attestation_id": "att_stripe_001",
+      "execution_id": "exec_demo_2026_001",
+      "receipt_id": "rcpt_demo_2026_001",
+      "request_fingerprint": "c3371e95ebdef611402d3a370b44d92a461cde959255f868e3f6f8477ec62146",
+      "counterparty": {
+        "organization_id": "org_stripe_us",
+        "organization_name": "Stripe US Inc.",
+        "role": "payment_processor",
+        "trust_domain": null
+      },
+      "assertion": {
+        "outcome_status": "succeeded",
+        "downstream_reference": "ch_3N1234567890ABCDEF",
+        "operation_type": "payment.transfer",
+        "amount_settled_minor": 100000,
+        "currency": "USD",
+        "raw_evidence_hash": null
+      },
+      "timestamp": "2026-10-10T18:09:00.770589+00:00",
+      "signing": {
+        "counterparty_key_id": "stripe:key:2026",
+        "algorithm": "ed25519",
+        "signature": "b3b069f7400738c966cbf720edc75cfd249cdb9e8a833e9c017742521972dbae8a07fc648918420af338cb6a5ed472f2e47a32aae2de529f0514e4319f6a770f"
+      }
+    }
+  ]
+}
