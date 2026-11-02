@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "blocklog": {
+      "command": "/usr/local/bin/blocklog-mcp",
+      "args": ["--transport", "stdio"],
+      "env": {
+        "BLOCKLOG_BACKEND_URL": "https://api.blocklogsecurity.com",
+        "BLOCKLOG_API_KEY": "blk_live_your_api_key_here"
+      }
+    }
+  }
+}

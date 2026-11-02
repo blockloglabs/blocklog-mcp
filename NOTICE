@@ -1,0 +1,7 @@
+Blocklog Model Context Protocol Server (blocklog-mcp)
+Copyright 2026 Blocklog Authors and Contributors
+
+This product includes software developed at Blocklog (https://github.com/blockloghq).
+
+This product includes cryptographic components implementing RFC 6962
+Merkle audit trees, canonical NFC JSON encoding, and Ed25519 digital signature verification.

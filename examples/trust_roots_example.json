@@ -1,0 +1,15 @@
+{
+  "primary_roots": {
+    "prod-primary-root": {
+      "public_key": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+      "status": "active",
+      "algorithm": "ed25519"
+    }
+  },
+  "witness_roots": {
+    "witness-notary-alpha": "4b4b2160938e55e510ee4c32b90b8f44ff53e5fc46bb84128f73b306b3fa2045"
+  },
+  "counterparty_roots": {
+    "counterparty-stripe": "a3b9840182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707512c"
+  }
+}
